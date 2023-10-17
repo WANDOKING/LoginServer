@@ -80,9 +80,9 @@ void LoginServer::process_CS_LOGIN_REQ_LOGIN(const uint64_t sessionID, const int
 {
 	WCHAR userID[20];
 	WCHAR userNick[20];
-
-	thread_local DBConnector connector(mDBIP, mDBUser, mDBPassword, mDBName, mDBPort);
-	thread_local cpp_redis::client redisClient;
+	
+	thread_local DBConnector connector(mDBIP, mDBUser, mDBPassword, mDBName, mDBPort); // 1스레드 1커넥션
+	thread_local cpp_redis::client redisClient;										   // 1스레드 1커넥션
 
 	if (false == connector.IsConnected())
 	{
@@ -100,6 +100,7 @@ void LoginServer::process_CS_LOGIN_REQ_LOGIN(const uint64_t sessionID, const int
 	
 	ASSERT_LIVE(connector.Query(L"SELECT * FROM account WHERE accountno = %lld", accountNo), L"Query Failed");
 
+	// 테스트 환경에서 로그인이 실패하는 경우는 없음
 	MYSQL_ROW result = connector.FetchRowOrNull();
 	ASSERT_LIVE(result != nullptr, L"no accountNo in account table");
 
@@ -120,11 +121,11 @@ void LoginServer::process_CS_LOGIN_REQ_LOGIN(const uint64_t sessionID, const int
 
 	if (ip == L"10.0.1.2")
 	{
-		wcscpy_s(chatServerIP, 16, L"10.0.1.1");
+		wcscpy_s(chatServerIP, 16, L"10.0.1.1"); // 더미 1
 	}
 	else if (ip == L"10.0.2.2")
 	{
-		wcscpy_s(chatServerIP, 16, L"10.0.2.1");
+		wcscpy_s(chatServerIP, 16, L"10.0.2.1"); // 더미 2
 	}
 	else
 	{
@@ -147,12 +148,13 @@ void LoginServer::process_CS_LOGIN_REQ_LOGIN(const uint64_t sessionID, const int
 	ASSERT_LIVE(connector.Query(L"SELECT * FROM status WHERE accountno = %lld", accountNo), L"Query Failed");
 	connector.FreeResult();
 
+	// 토큰 서버에 토큰 저장
 	redisClient.setex(std::to_string(accountNo), 20, std::string(sessionKey, 64));
 	redisClient.sync_commit();
 
 	SendPacket(sessionID, packet);
 
-	packet->DecrementRefCount();
+	Serializer::Free(packet);
 }
 
 unsigned int LoginServer::timeoutThread(void* loginServerParam)

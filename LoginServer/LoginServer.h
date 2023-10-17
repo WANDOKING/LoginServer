@@ -82,11 +82,11 @@ private: // 메세지 관련
         Serializer* packet = Serializer::Alloc();
 
         *packet << (WORD)en_PACKET_CS_LOGIN_RES_LOGIN << accountNo << status;
-        packet->InsertByte((const char*)id, sizeof(WCHAR) * 20);
-        packet->InsertByte((const char*)nickName, sizeof(WCHAR) * 20);
-        packet->InsertByte((const char*)gameServerIP, sizeof(WCHAR) * 16);
+        packet->InsertByte(reinterpret_cast<const char*>(id), sizeof(WCHAR) * 20);
+        packet->InsertByte(reinterpret_cast<const char*>(nickName), sizeof(WCHAR) * 20);
+        packet->InsertByte(reinterpret_cast<const char*>(gameServerIP), sizeof(WCHAR) * 16);
         *packet << gameServerPort;
-        packet->InsertByte((const char*)chatServerIP, sizeof(WCHAR) * 16);
+        packet->InsertByte(reinterpret_cast<const char*>(chatServerIP), sizeof(WCHAR) * 16);
         *packet << chatServerPort;
 
         return packet;
