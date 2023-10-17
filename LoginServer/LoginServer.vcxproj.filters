@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="LoginServer">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="NetLibrary">
+      <UniqueIdentifier>{c2d3e7e6-8258-43fa-ac9f-30d0d688e7df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetLibrary\CrashDump">
+      <UniqueIdentifier>{7c03313d-f1b8-41f6-8948-5a5a3d8815f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetLibrary\DataStructure">
+      <UniqueIdentifier>{f110125c-124b-4a4f-900f-3bf9ae9e74b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetLibrary\DBConnector">
+      <UniqueIdentifier>{b5ef9cc2-b8af-48b2-a299-e4321381b039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetLibrary\Logger">
+      <UniqueIdentifier>{1d8851d1-eae8-4519-9c50-5fa88c5e63ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetLibrary\Memory">
+      <UniqueIdentifier>{2291fe93-f764-4b54-a9ad-7b95fd13118e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetLibrary\NetServer">
+      <UniqueIdentifier>{ef46c929-8418-4a97-b11f-69ab9a56abee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetLibrary\Profiler">
+      <UniqueIdentifier>{bcf892a8-888e-430e-abc9-0b5f19fde65a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetLibrary\Tool">
+      <UniqueIdentifier>{a94bb832-1564-49c3-97fe-4676fb4ebe6a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LoginServer.h">
+      <Filter>LoginServer</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonProtocol.h">
+      <Filter>LoginServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\CrashDump\CrashDump.h">
+      <Filter>NetLibrary\CrashDump</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DataStructure\LockFreeQueue.h">
+      <Filter>NetLibrary\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DataStructure\LockFreeStack.h">
+      <Filter>NetLibrary\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\DBConnector.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\errmsg.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\field_types.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysql\client_plugin.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysql\plugin_auth_common.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysql\udf_registration_types.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysql.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysqld_error.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysqlx_ername.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysqlx_error.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysqlx_version.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysql_com.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysql_time.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\mysql_version.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\my_command.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\my_compress.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\DBConnector\my_list.h">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\Logger\Logger.h">
+      <Filter>NetLibrary\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\Memory\LockFreeObjectPool.h">
+      <Filter>NetLibrary\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\Memory\ObjectPool.h">
+      <Filter>NetLibrary\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\Memory\OverflowChecker.h">
+      <Filter>NetLibrary\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\Memory\TlsObjectPool.h">
+      <Filter>NetLibrary\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\NetServer\NetServer.h">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\NetServer\NetUtils.h">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\NetServer\NetworkHeader.h">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\NetServer\RingBuffer.h">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\NetServer\Serializer.h">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\NetServer\Session.h">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\Profiler\Profiler.h">
+      <Filter>NetLibrary\Profiler</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\Tool\ConfigReader.h">
+      <Filter>NetLibrary\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\Tool\CpuUsageMonitor.h">
+      <Filter>NetLibrary\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLibrary\NetServer\NetClient.h">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorClient.h">
+      <Filter>LoginServer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>LoginServer</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginServer.cpp">
+      <Filter>LoginServer</Filter>
+    </ClCompile>
+    <ClCompile Include="NetLibrary\CrashDump\CrashDump.cpp">
+      <Filter>NetLibrary\CrashDump</Filter>
+    </ClCompile>
+    <ClCompile Include="NetLibrary\DBConnector\openssl\applink.c">
+      <Filter>NetLibrary\DBConnector</Filter>
+    </ClCompile>
+    <ClCompile Include="NetLibrary\Logger\Logger.cpp">
+      <Filter>NetLibrary\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="NetLibrary\NetServer\NetServer.cpp">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClCompile>
+    <ClCompile Include="NetLibrary\NetServer\Session.cpp">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClCompile>
+    <ClCompile Include="NetLibrary\Profiler\Profiler.cpp">
+      <Filter>NetLibrary\Profiler</Filter>
+    </ClCompile>
+    <ClCompile Include="NetLibrary\NetServer\NetClient.cpp">
+      <Filter>NetLibrary\NetServer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LoginServer.config">
+      <Filter>LoginServer</Filter>
+    </None>
+  </ItemGroup>
+</Project>
